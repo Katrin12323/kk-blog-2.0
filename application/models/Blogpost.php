@@ -19,5 +19,12 @@ class Blogpost extends CI_Model {
         $query = $this->db->get('blog_post');
         return $query->result_array();
     }
+
+    public function getPostById($id)
+    {
+        $query = $this->db->get('blog_post', array('id' => $id));
+
+        return $query->first_row();
+    }
 }
 
