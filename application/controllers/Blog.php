@@ -24,4 +24,15 @@ class Blog extends CI_Controller {
 
         $this->twig->display('blog/post', $data);
     }
+
+    public function category($category)
+    {
+        $data['baseUrl'] = base_url();
+        $this->load->model('blogpost');
+
+        $data['category'] = $this->blogpost->getByCategory($category);
+
+        $this->twig->display('blog/sortByCategory', $data);
+
+    }
 }

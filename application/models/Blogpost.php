@@ -22,9 +22,16 @@ class Blogpost extends CI_Model {
 
     public function getPostById($id)
     {
-        $query = $this->db->get('blog_post', array('id' => $id));
+        $query = $this->db->get_where('blog_post', array('id' => $id));
 
         return $query->first_row();
+    }
+
+    public function getByCategory($category)
+    {
+        $query = $this->db->get_where('blog_post', array('category' => $category));
+
+        return $query->result_array();
     }
 }
 
