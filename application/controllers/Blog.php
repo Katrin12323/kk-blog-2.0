@@ -13,4 +13,15 @@ class Blog extends CI_Controller {
 
         $this->twig->display('blog/welcome_page/welcomePage', $data);
     }
+
+    public function post($id) {
+
+        $data['baseUrl'] = base_url();
+
+        $this->load->model('blogpost');
+
+        $data['post'] = $this->blogpost->getPostById($id);
+
+        $this->twig->display('blog/post', $data);
+    }
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ baseUrl }}/application/assets/css/kk-blog-2.0-css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ baseUrl }}/application/assets/js/kk-blog2.0-efects.js"></script>
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+</head>
+
+<body>
+
+<div class="logoHolder">
+    <a href="welcome.php"><img src="{{ baseUrl }}application/assets/images/girlTalkLogo.jpg" alt="logo"/> </a>
+
+</div>
+
+<div class="mainPage">
+
+    <div class="leftMenu">
+
+        <ul id="leftUlMenu">
+
+            <li>
+                <a href="list.php?category=makeup"> Make up & cosmetics </a>
+            </li>
+
+            <li>
+                <a href="list.php?category=hollywood"> Hollywood's events </a>
+            </li>
+
+            <li>
+                <a href="list.php?category=social"> Social & Humor </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="right">
+
+
+        <h2 class='h2OfOpenPosts'> {{ post.title }}</h2>
+
+
+        <div class= "theRowUnderTheTitleOfThePost">
+            <input type="button" value="Big font size">  <br/>
+
+
+            <h3> Автор: {{ post.author }} </h3>
+
+        </div>
+
+        <div class="text">
+
+            <p class='openPosts'> {{ post.text }} </p>";
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -41,7 +41,7 @@
             <ul id='rightUlPosts'>
                {% for post in blogposts %}
                    <li>
-                       <a href=""> {{ post.title}} </a>
+                       <a href="http://localhost/kk-blog-2.0/index.php/Blog/post/{{ post.id }}"> {{ post.title}} </a>
                        <p> {{ post.text|slice(0,220) ~ '(...)' }}</p>
                    </li>
 
