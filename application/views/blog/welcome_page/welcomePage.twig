@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ baseUrl }}/application/assets/css/kk-blog-2.0-css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ baseUrl }}/application/assets/js/kk-blog2.0-efects.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <div class="logoHolder">
+        <a href="welcome.php"><img src="{{ baseUrl }}application/assets/images/girlTalkLogo.jpg" alt="logo"/> </a>
+
+    </div>
+
+    <div class="mainPage">
+
+        <div class="leftMenu">
+
+            <ul id="leftUlMenu">
+
+                <li>
+                    <a href="list.php?category=makeup"> Make up & cosmetics </a>
+                </li>
+
+                <li>
+                    <a href="list.php?category=hollywood"> Hollywood's events </a>
+                </li>
+
+                <li>
+                    <a href="list.php?category=social"> Social & Humor </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="right">
+
+            <ul id='rightUlPosts'>
+               {% for post in blogposts %}
+                   <li>
+                       <a href=""> {{ post.title}} </a>
+                       <p> {{ post.text|slice(0,220) ~ '(...)' }}</p>
+                   </li>
+
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+</html>
