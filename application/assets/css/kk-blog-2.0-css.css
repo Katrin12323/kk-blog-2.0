@@ -1,0 +1,163 @@
+
+.logoHolder{
+    display: inline;
+    height: 200px;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.logoHolder img {
+    height: 200px;
+    width: 300px;
+}
+
+body {
+    width: auto;
+}
+
+.mainPage {
+    width: 80%;
+    display: inline;
+    float: left;
+}
+
+.leftMenu {
+    display: inline;
+    float: left;
+    margin-top: -30px;
+    margin-right: 50px;
+    color: lightgrey;
+    font-style: italic;
+    font-size: x-large;
+}
+
+#leftUlMenu {
+    list-style-type: none;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px ;
+    padding-left: 10px;
+    width: 200px;
+    background-color: peachpuff;
+    border-radius: 50px;
+}
+
+#leftUlMenu li a {
+    display: block;
+    color: #000;
+    padding: 16px 40px;
+    text-decoration: none;
+    transform: rotate(-10deg);
+}
+
+#leftUlMenu li a:hover,  #leftUlMenu .active a {
+    background-color: peachpuff;
+    color: #A31C69;
+    border-radius: 100px;
+}
+
+
+.right {
+    display: inline;
+    width: 800px;
+    text-align: center;
+
+}
+
+#rightUlPosts {
+    list-style-type: none;
+    font-size: large;
+    margin-top: -160px;
+    margin-left: 350px;
+    color: black;
+    font-style: oblique;
+
+}
+
+#rightUlPosts li a {
+    text-decoration: none;
+    color: #A31C69;
+    font-style: italic;
+    font-size: x-large;
+
+}
+
+#rightUlPosts li a:hover {
+    color: #d337ff;
+}
+
+
+.pagination {
+    display: block;
+    margin-left: 650px;
+    margin-top: 10px;
+
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.pagination a.activePage {
+    color: #A31C69;
+    font-size: xx-large;
+}
+
+.h2OfOpenPosts {
+    margin-top: -120px;
+    margin-left: 300px;
+    font-size: xx-large;
+    font-style: oblique;
+    text-align: center;
+
+}
+
+.openPosts {
+    font-size: x-large;
+    font-style: italic;
+    text-align: center;
+    margin-top: -40px;
+    margin-left: 300px;
+}
+.theRowUnderTheTitleOfThePost{
+    display: block;
+}
+.theRowUnderTheTitleOfThePost h3 {
+    display: inline-block;
+    width: 300px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    font-style: italic;
+    text-align: left;
+}
+
+#adminBody {
+    background-image: url("../images/banana.jpg");
+    background-repeat: repeat;
+    opacity: 0.3;
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+#adminPostForm {
+    opacity: 0.8;
+    font-weight: bold;
+}
+
+#adminPostForm input,#adminPostForm textarea, #adminPostForm select {
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
