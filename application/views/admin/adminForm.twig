@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>KK blog</title>
+    <link rel="stylesheet" type="text/css" href="../css/k-blog.css">
+
+</head>
+<body>
+<div id="adminBody">
+</div>
+<form id="adminPostForm" action="http://localhost/kk-blog-2.0/index.php/Admin/saveNewPost" method="post">
+
+    <label for="title"> Title </label> <br/>
+    <input type="text" name="title"><br/><br/>
+
+    <label for="category"> Select category: </label><br/> <br/>
+    <select name="category">
+        <option  value="makeup" > Make up & cosmetics</option>
+        <option  value="hollywood"> Hollywood</option>
+        <option  value="social"> Social & Humor </option>
+    </select><br/><br/>
+
+    <label for="text"> Text </label> <br/>
+    <textarea  rows="10" cols="50" name="text"></textarea> <br/><br/>
+
+    <label for="author"> Author </label> <br/>
+    <input type="text" name="author"><br/><br/>
+
+    <label for="image"> Image </label> <br/>
+    <input type="text" name="image"><br/><br/>
+
+    <input type="submit" value="Save">
+
+</form>
+
+</body>
+</html>
