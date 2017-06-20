@@ -38,5 +38,36 @@ class Blogpost extends CI_Model {
     {
         $this->db->insert('blog_post', $this);
     }
+
+    public function getById($id)
+    {
+       $query = $this->db->get_where('blog_post', array('id' => $id));
+
+        return $query->first_row();
+    }
+
+    public function getAllPostsById()
+    {
+        $query = $this->db->get('blog_post');
+
+        return $query->result_array();
+    }
+
+    public function deletePostsById($id)
+    {
+        $this->db->delete('blog_post', array('id' => $id));
+    }
+
+    public function update($id)
+    {
+        $this->db->update('blog_post',$this, array('id' => $id));
+    }
+
+    public function searchByCategory($category)
+    {
+        $query = $this->db->get_where('blog_post', array('category' => $category));
+
+        return $query->result_array();
+    }
 }
 

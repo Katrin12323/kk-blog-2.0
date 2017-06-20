@@ -9,28 +9,28 @@
 <body>
 <div id="adminBody">
 </div>
-<form id="adminPostForm" action="http://localhost/kk-blog-2.0/index.php/Admin/saveNewPost" method="post">
+<form id="adminPostForm" action="http://localhost/kk-blog-2.0/index.php/Admin/{{ action }}{% if id %}/{{ id }}{% endif %}" method="post">
 
     <label for="title"> Title </label> <br/>
-    <input type="text" name="title"><br/><br/>
+    <input type="text" name="title" value="{{ post.title }}"><br/><br/>
 
     <label for="category"> Select category: </label><br/> <br/>
     <select name="category">
-        <option  value="makeup" > Make up & cosmetics</option>
-        <option  value="hollywood"> Hollywood</option>
-        <option  value="social"> Social & Humor </option>
+        <option  name="makeup" value="{{ post.makeup }}"> Make up & cosmetics</option>
+        <option  name="hollywood" value="{{ post.hollywood }}"> Hollywood</option>
+        <option  name="social" value=" {{ post.social }}"> Social & Humor </option>
     </select><br/><br/>
 
     <label for="text"> Text </label> <br/>
-    <textarea  rows="10" cols="50" name="text"></textarea> <br/><br/>
+    <textarea rows="10" cols="50" name="text">{{ post.text }}</textarea> <br/><br/>
 
     <label for="author"> Author </label> <br/>
-    <input type="text" name="author"><br/><br/>
+    <input type="text" name="author" value="{{ post.author }}"><br/><br/>
 
     <label for="image"> Image </label> <br/>
-    <input type="text" name="image"><br/><br/>
+    <input type="text" name="image" value="{{ post.image }}"><br/><br/>
 
-    <input type="submit" value="Save">
+    <input type="submit" value="{{ button }}">
 
 </form>
 
