@@ -22,15 +22,15 @@
         <ul id="leftUlMenu">
 
             <li>
-                <a href="http://localhost/kk-blog-2.0/index.php/Blog/category/makeup"> Make up & cosmetics </a>
+                <a href="http://localhost/kk-blog-2.0/index.php/Blog/category/makeup/1"> Make up & cosmetics </a>
             </li>
 
             <li>
-                <a href="http://localhost/kk-blog-2.0/index.php/Blog/category/hollywood"> Hollywood's events </a>
+                <a href="http://localhost/kk-blog-2.0/index.php/Blog/category/hollywood/1"> Hollywood's events </a>
             </li>
 
             <li>
-                <a href="http://localhost/kk-blog-2.0/index.php/Blog/category/social"> Social & Humor </a>
+                <a href="http://localhost/kk-blog-2.0/index.php/Blog/category/social/1"> Social & Humor </a>
             </li>
 
         </ul>
@@ -47,6 +47,9 @@
 
             {% endfor %}
         </ul>
+        <div class="pagination">
+            {{ pagination|raw }}
+        </div>
 
     </div>
 </div>

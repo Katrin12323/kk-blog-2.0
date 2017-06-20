@@ -25,12 +25,26 @@ class Blog extends CI_Controller {
         $this->twig->display('blog/post', $data);
     }
 
-    public function category($category)
+    public function category($category, $page)
     {
         $data['baseUrl'] = base_url();
         $this->load->model('blogpost');
+        $this->load->library('pagination');
 
-        $data['category'] = $this->blogpost->getByCategory($category);
+        $config['base_url'] = 'http://localhost/kk-blog-2.0/index.php/Blog/category/' . $category . "/";
+        $config['total_rows'] = $this->blogpost->countCategory($category);
+        $config['per_page'] = 2;
+        $config['uri_segment'] = 2;
+        $config['use_page_numbers'] = TRUE;
+        $config['cur_tag_open'] = '<a href="#" class="activePage">';
+        $config['cur_tag_close'] = '</a>';
+        $config["cur_page"] = $page;
+
+        $this->pagination->initialize($config);
+
+
+        $data['category'] = $this->blogpost->getByCategory($category, $page);
+        $data['pagination'] = $this->pagination->create_links();
 
         $this->twig->display('blog/sortByCategory', $data);
 

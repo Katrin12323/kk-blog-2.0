@@ -27,11 +27,20 @@ class Blogpost extends CI_Model {
         return $query->first_row();
     }
 
-    public function getByCategory($category)
+    public function getByCategory($category, $page)
     {
+        $this->db->offset($page * 5);
+        $this->db->limit(5);
         $query = $this->db->get_where('blog_post', array('category' => $category));
 
         return $query->result_array();
+    }
+
+    public function countCategory($category)
+    {
+        $query = $this->db->get_where('blog_post', array('category' => $category));
+
+        return $query->num_rows();
     }
 }
 
