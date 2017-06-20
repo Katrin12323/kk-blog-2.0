@@ -33,6 +33,6 @@ class Blog extends CI_Controller {
         $data['category'] = $this->blogpost->getByCategory($category);
 
         $this->twig->display('blog/sortByCategory', $data);
-
     }
+
 }
