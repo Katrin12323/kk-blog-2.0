@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title> All posts </title>
+</head>
+
+<body>
+<form action="http://localhost/kk-blog-2.0/index.php/Admin/search" method="post">
+    <label for="category">Search product by category:  </label><br/>
+    <input type="text" name="category" value="{{ category }}">
+
+    <input type="submit" value="Search">
+</form> <br/>
+
+</form>
+<ol>
+    {% for getPosts in allPosts %}
+        <li> Title: {{ getPosts.title }}<br/>
+             Author: {{ getPosts.author }};<br/>
+             Category: {{ getPosts.category }}<br/>
+        </li>
+
+        <a href="http://localhost/kk-blog-2.0/index.php/Admin/deletePosts/{{ getPosts.id }}"> Delete this product </a>
+        ; <a href="http://localhost/kk-blog-2.0/index.php/Admin/updateForm/{{ getPosts.id }}"> Update this product </a> <br/><br/>
+    {% endfor %} <br/> <br/>
+</ol>
+
+</body>
+
+</html>
